@@ -13,7 +13,7 @@ public class WindSensor : MonoBehaviour {
     private Vector3 windVelocity;
 
 	void Start () {
-        windZone = gameObject.GetComponent<WindZone>();
+        //windZone = gameObject.GetComponent<WindZone>();
         partSystem = gameObject.GetComponent<ParticleSystem>();
         particles = new ParticleSystem.Particle[partSystem.main.maxParticles];
         this.emitParams = new ParticleSystem.EmitParams();
@@ -47,7 +47,6 @@ public class WindSensor : MonoBehaviour {
 
     public Vector3 GetVelocity()
     {
-        Debug.Log(this.windVelocity * 100);
         return this.windVelocity;
     }
 
